@@ -57,5 +57,15 @@ function filterHighValueTransactions(transactions, filterFunction) {
 let transactions = [500, 1200, 3000, 800, 2200];// declare an array
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); 
 
-
+//Task 7
+function createBudgetTracker() { //write a function that returns anothe function
+    let balance = 0;
+    return function (expense) {
+        balance -= expense;
+    console.log(`Current Balance: -$${Math.abs(balance)}`); //logs
+};
+}
+let budget = createBudgetTracker();
+budget(300);
+budget(200);
 
