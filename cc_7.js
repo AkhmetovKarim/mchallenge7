@@ -41,3 +41,11 @@ function calculateShippingCost(weight, location, expedited = false) { //write a 
 }
 console.log(calculateShippingCost(10, "USA", true));//logs
 console.log(calculateShippingCost(5, "Canada", false));
+
+//Task 5
+function calculateLoanInterest(principal, rate, years) { //write a functio that returns total interes
+    let interest = principal * rate * years; //formula
+    return `Total Interest: $${interest.toFixed(2)}`;
+}
+console.log(calculateLoanInterest(1000, 0.05, 3)); //logs
+console.log(calculateLoanInterest(5000, 0.07, 5));
