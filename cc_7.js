@@ -49,3 +49,13 @@ function calculateLoanInterest(principal, rate, years) { //write a functio that 
 }
 console.log(calculateLoanInterest(1000, 0.05, 3)); //logs
 console.log(calculateLoanInterest(5000, 0.07, 5));
+
+//Task 6
+function filterHighValueTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+let transactions = [500, 1200, 3000, 800, 2200];// declare an array
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); 
+
+
+
