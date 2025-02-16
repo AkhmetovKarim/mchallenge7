@@ -69,3 +69,12 @@ let budget = createBudgetTracker();
 budget(300);
 budget(200);
 
+//Task 8
+function calculateGrowth(years, revenue) { //write a recursive function that projects reveue growth
+    if (years >= 10) { //until year 10
+        return revenue;
+    }
+    return calculateGrowth(years +1, revenue * 1.05); //each year increases by 5 percent
+}
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); //logs
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`);
